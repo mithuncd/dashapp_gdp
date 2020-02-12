@@ -4,7 +4,8 @@ import dash_html_components as html
 
 dash_app = dash.Dash()
 app = dash_app.server
-
+app.scripts.config.serve_locally = True
+app.css.config.serve_locally = True
 dash_app.layout = html.Div(children=[
     html.H1(children='Hello Dash'),
 
