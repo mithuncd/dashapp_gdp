@@ -2,11 +2,13 @@ import dash
 import dash_core_components as dcc
 import dash_html_components as html
 
-dash_app = dash.Dash()
-app = dash_app.server
+app = dash.Dash()
+
 app.scripts.config.serve_locally = True
 app.css.config.serve_locally = True
-dash_app.layout = html.Div(children=[
+
+
+app.layout = html.Div(children=[
     html.H1(children='Hello Dash'),
 
     html.Div(children='''
@@ -28,4 +30,4 @@ dash_app.layout = html.Div(children=[
 ])
 
 if __name__ == '__main__':
-    dash_app.run_server()
+    app.run_server()
